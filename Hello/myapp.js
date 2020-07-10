@@ -28,7 +28,7 @@ function win(){
     !timePassed++;
     
   }
-}
+} 
 
 function collisionDetection() {
 
