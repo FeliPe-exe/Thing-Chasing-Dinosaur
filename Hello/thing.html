@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html onclick="jump()">
+<head>
+<meta charset = "utf-8">
+<title>Game</title>
+
+<style>
+
+*{padding : 0px;
+  margin : 0px;}
+#block{
+    width:500px;
+    height:300px;
+    border: 1px black solid ;
+    position:absolute;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/000/293/933/small/0nfx_0zi2_180801.jpg);
+    background-size: 500px 300px;
+
+}
+
+
+#character{
+   width:25px;
+   height:50px;
+   border:1px black solid;
+   background-color: Red;
+   position: relative;
+   top: 250px;
+   background-image:url(https://library.kissclipart.com/20180907/gbq/kissclipart-green-dinosaur-cartoon-clipart-dinosaur-clip-art-34039bf0a426ecb8.jpg);
+   background-size: 25px 50px;
+   
+}
+
+.jump{
+    animation: jump 1.5s;
+}
+
+@keyframes jump{
+    0%{top:250px}
+    30%{top: 150px}
+    70%{top: 150px}
+    100%{top:250px}
+
+}
+
+#pic{
+    position:relative;
+}
+
+#obstacles{
+    width: 10px;
+    height: 25px;
+    border: 1px black solid;
+    position: relative;
+    background-color:green;
+    top:225px;
+    left: 490px;
+    animation: obstacle 1s linear;
+    animation-iteration-count: infinite;
+    background-image:url(https://angerasbeauty.files.wordpress.com/2010/03/angry1.jpg?w=300&h=214);
+    background-size: 10px 25px;
+    
+}
+
+#Button{
+    position: relative;
+    top: 200px;
+
+}
+
+@keyframes obstacle{
+    0%{left:490px}
+    100%{left:-50px}
+}
+
+#counter{
+    position:relative;
+    width: 100px;
+    height: 50px;
+    left: 600px;
+    top: 100px;
+    background-color: red;
+    border: 1px solid;
+}
+
+#bebe{
+    top: 500px;
+    position: relative;
+}
+
+h{
+    top: 525px;
+    position:relative;
+}
+
+
+</style>
+
+</head>
+<body>
+
+   
+
+    <div id="block"></div>    
+    <div id="character"></div>
+    <div id="obstacles"></div>
+    <div id="counter"> Counter <span id="timePassed"></span> </div>
+
+    
+    
+    <button onclick="location.reload();" id="Button">Click to start or refresh</button>
+    <img id="bebe" src="https://angerasbeauty.files.wordpress.com/2010/03/angry1.jpg?w=300&h=214" width="200px">
+    <h> This thing is running towards you, jump over it 10 times to beat it!</h>
+    
+    <script src="myapp.js"></script>
+</body>
+
+</html>
